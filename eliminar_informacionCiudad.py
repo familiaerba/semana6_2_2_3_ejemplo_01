@@ -7,12 +7,12 @@ from enlace_base import client
 # se obtiene la colección general (base de datos)
 
 db = client.baseAlexErba
-coleccion = db.pais
+coleccion = db.ciudad
 
 print("Proceso para borrar la informacion de una colección")
 coleccion.delete_many({})
 
 print("Muestra todos los documentos")
-data_02 = coleccion.find()
-for registro in data_02:
+resultado = coleccion.find()
+for registro in resultado:
     print(registro)
